@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LMS Landing Page
 
-## Getting Started
+Modern landing page for LMS (Learning Management System) platform designed for universities in Uzbekistan.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Design** - Clean and professional UI with gradient backgrounds and smooth animations
+- **Fully Responsive** - Optimized for desktop, tablet, and mobile devices
+- **Fast Performance** - Built with Next.js and optimized for speed
+- **SEO Friendly** - Server-side rendering for better search engine visibility
+- **TypeScript** - Type-safe development experience
+- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+
+## 🛠️ Tech Stack
+
+- [Next.js 16](https://nextjs.org/) - React framework with App Router
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [React](https://react.dev/) - UI library
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/YOUR_USERNAME/lms-landing-page.git
+cd lms-landing-page
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## 🏗️ Build
 
-To learn more about Next.js, take a look at the following resources:
+Create a production build:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The static files will be generated in the `out` directory.
 
-## Deploy on Vercel
+## 📱 Sections
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Hero Section** - Main landing area with CTA buttons
+- **Universities** - Partner universities showcase
+- **Features** - Platform capabilities with interactive dashboard preview
+- **Integrations** - Third-party integrations (HEMIS, Zoom, Microsoft Teams, AI)
+- **Mobile App** - Mobile application features
+- **Contact** - Consultation and contact information
+- **Footer** - Site navigation and social links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Design
+
+The design is inspired by modern SaaS landing pages with:
+- Gradient backgrounds (green to purple)
+- Smooth animations and transitions
+- Interactive hover effects
+- Clean typography
+- Professional iconography
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📧 Contact
+
+For questions or support, contact us at:
+- Phone: (+998) 77 013-78-04
+- Email: info@lms.uz

@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --import-alias \"@/*\")"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --import-alias \"@/*\")",
+      "Bash(mkdir -p components public/images)",
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(git config user.name)",
+      "Bash(git config user.email)",
+      "Bash(git init)",
+      "Bash(git remote add origin https://github.com/alievbaxtiyor/lms-landing-page.git)",
+      "Bash(git add .)"
     ],
     "deny": [],
     "ask": []
