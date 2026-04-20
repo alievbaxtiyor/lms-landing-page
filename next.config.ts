@@ -1,9 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export', // Static HTML export
+  // Remove output: 'export' for development
+  // Add it back only when building for production
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: false,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
 };
 
