@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import TimeStack, { TimeStackItem } from './TimeStack';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden bg-white">
+    <section className="relative min-h-screen flex flex-col overflow-hidden bg-gradient-to-b from-white via-primary-50/30 to-white">
       {/* Creative Background Layer */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Gradient Base */}
@@ -58,10 +59,10 @@ export default function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link
-              href="#demo"
+              href="#features"
               className="group px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
             >
-              Bepul sinab ko'ring
+              Xususiyatlar
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -81,44 +82,72 @@ export default function HeroSection() {
               <svg className="w-5 h-5 text-primary-dark" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span>15+ universitet</span>
+              <span>AI bilan integratsiya</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-primary-dark" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span>Bepul sinov</span>
+              <span>Zoom bilan integratsiya</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-primary-dark" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span>24/7 qo'llab-quvvatlash</span>
+              <span>Elektron kutubxona</span>
             </div>
           </div>
         </div>
 
         {/* Right Content - Dashboard Preview */}
         <div className="relative z-10">
-          <div className="relative">
-            {/* Dashboard Screenshot */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+          <TimeStack
+            interval={2000}
+            itemStackDistance={120}
+            rotationAmount={-3}
+            blurAmount={1}
+            baseScale={0.94}
+            itemScale={0.015}
+            transitionDuration={1000}
+          >
+            <TimeStackItem>
               <Image
                 src="/images/hero/hero.png"
-                alt="LMS Dashboard Preview"
+                alt="LMS Dashboard Preview 1"
                 width={900}
                 height={600}
                 className="w-full h-auto"
                 priority
               />
-            </div>
-
-            {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-primary to-primary-dark text-white rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform">
-              <div className="text-3xl font-bold mb-1">15+</div>
-              <div className="text-sm opacity-90">Universitetlar</div>
-            </div>
-          </div>
+            </TimeStackItem>
+            <TimeStackItem>
+              <Image
+                src="/images/hero/hero.png"
+                alt="LMS Dashboard Preview 2"
+                width={900}
+                height={600}
+                className="w-full h-auto"
+              />
+            </TimeStackItem>
+            <TimeStackItem>
+              <Image
+                src="/images/hero/hero.png"
+                alt="LMS Dashboard Preview 3"
+                width={900}
+                height={600}
+                className="w-full h-auto"
+              />
+            </TimeStackItem>
+            <TimeStackItem>
+              <Image
+                src="/images/hero/hero.png"
+                alt="LMS Dashboard Preview 4"
+                width={900}
+                height={600}
+                className="w-full h-auto"
+              />
+            </TimeStackItem>
+          </TimeStack>
         </div>
         </div>
       </div>
@@ -126,35 +155,55 @@ export default function HeroSection() {
       {/* Universities Logos Section - Bottom */}
       <div className="relative max-w-7xl mx-auto px-6 py-12 z-10">
         <div className="text-center mb-8">
-          <p className="text-sm text-gray-500 uppercase tracking-wider font-medium">Ishonch bildirgan universitetlar</p>
+          <p className="text-sm text-gray-500 uppercase tracking-wider font-medium">Biz bilan rivojlanayotgan 15+ universitetlar</p>
         </div>
-        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-6 items-center">
-          {[
-            { name: 'Adabiyot', src: '/images/logosUnivers/adabiyot.jpg' },
-            { name: 'ADTI', src: '/images/logosUnivers/adti.jpg' },
-            { name: 'BXU', src: '/images/logosUnivers/bxu.jpg' },
-            { name: 'CSU', src: '/images/logosUnivers/csu.jpg' },
-            { name: 'FDU', src: '/images/logosUnivers/fdu.jpg' },
-            { name: 'OXU', src: '/images/logosUnivers/oxu.jpg' },
-            { name: 'QDU', src: '/images/logosUnivers/qdu.jpg' },
-            { name: 'Renesans', src: '/images/logosUnivers/renesans.jpg' },
-            { name: 'TDU', src: '/images/logosUnivers/tdu.jpg' },
-          ].map((university, index) => (
-            <div
-              key={index}
-              className="group relative bg-white rounded-2xl p-4 hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-100"
-            >
-              <div className="relative w-full h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
-                <img
-                  src={university.src}
-                  alt={university.name}
-                  className="w-full h-full object-contain"
-                />
+        <div className="relative overflow-hidden">
+          {/* Left Fade */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+          {/* Right Fade */}
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+
+          <div className="flex gap-6 items-center animate-[rotate-logos_40s_linear_infinite]">
+            {[
+              { name: 'Adabiyot', src: '/images/logosUnivers/adabiyot.jpg' },
+              { name: 'ADTI', src: '/images/logosUnivers/adti.jpg' },
+              { name: 'BXU', src: '/images/logosUnivers/bxu.jpg' },
+              { name: 'CSU', src: '/images/logosUnivers/csu.jpg' },
+              { name: 'FDU', src: '/images/logosUnivers/fdu.jpg' },
+              { name: 'OXU', src: '/images/logosUnivers/oxu.jpg' },
+              { name: 'QDU', src: '/images/logosUnivers/qdu.jpg' },
+              { name: 'Renesans', src: '/images/logosUnivers/renesans.jpg' },
+              { name: 'TDU', src: '/images/logosUnivers/tdu.jpg' },
+            ].concat([
+              { name: 'Adabiyot', src: '/images/logosUnivers/adabiyot.jpg' },
+              { name: 'ADTI', src: '/images/logosUnivers/adti.jpg' },
+              { name: 'BXU', src: '/images/logosUnivers/bxu.jpg' },
+              { name: 'CSU', src: '/images/logosUnivers/csu.jpg' },
+              { name: 'FDU', src: '/images/logosUnivers/fdu.jpg' },
+              { name: 'OXU', src: '/images/logosUnivers/oxu.jpg' },
+              { name: 'QDU', src: '/images/logosUnivers/qdu.jpg' },
+              { name: 'Renesans', src: '/images/logosUnivers/renesans.jpg' },
+              { name: 'TDU', src: '/images/logosUnivers/tdu.jpg' },
+            ]).map((university, index) => (
+              <div
+                key={index}
+                className="group relative bg-white rounded-2xl p-4 hover:shadow-xl transition-all duration-300 border border-gray-100 flex-shrink-0 w-32"
+              >
+                <div className="relative w-full h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
+                  <img
+                    src={university.src}
+                    alt={university.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
+
+      {/* Bottom Gradient Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
     </section>
   );
 }

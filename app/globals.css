@@ -73,3 +73,13 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* University Logos Rotating Animation */
+@keyframes rotate-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

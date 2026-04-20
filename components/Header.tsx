@@ -46,10 +46,10 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
-              href="/login"
+              href="#contact"
               className="px-6 py-2.5 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-200"
             >
-              Kirish
+              Aloqa
             </Link>
           </div>
 
@@ -84,10 +84,10 @@ export default function Header() {
               Bog'lanish
             </Link>
             <Link
-              href="/login"
+              href="#contact"
               className="mt-2 px-6 py-2.5 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full font-medium text-center"
             >
-              Kirish
+              Aloqa
             </Link>
           </nav>
         )}
